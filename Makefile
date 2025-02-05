@@ -23,10 +23,10 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 bonus: $(OBJS) $(BONUS_OBJS)
-	$(AR) $(NAME) $(BONUS_OBJS)
+	$(AR) $(NAME) $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -$(HEADER) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
