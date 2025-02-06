@@ -14,10 +14,11 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *res = NULL;
-	t_list *new_node;
-	void *new_content;
+	t_list	*res;
+	t_list	*new_node;
+	void	*new_content;
 
+	res = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
 	while (lst)
